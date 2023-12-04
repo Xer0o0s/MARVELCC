@@ -13,10 +13,10 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+
+      appBar: AppBar(backgroundColor: Colors.white,
         title: Center(
           child: Image.asset(
-            //ajoute une image a la navbar
             'assets/images/MARVELCC.png',
             width: 260.0, // Ajustez la largeur selon vos besoins
             height: 100.0, // Ajustez la hauteur selon vos besoins
@@ -36,7 +36,7 @@ class _SecondPageState extends State<SecondPage> {
                 },
               ),
               IconButton(
-                icon: Icon(Icons.),
+                icon: Icon(Icons.home),
                 onPressed: () {
                   // Action lorsque l'icône Accueil est pressée
                 },

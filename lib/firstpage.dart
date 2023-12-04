@@ -13,7 +13,7 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: Colors.white,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',
