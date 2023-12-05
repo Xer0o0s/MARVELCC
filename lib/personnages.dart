@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
-class ThirdPage extends StatefulWidget {
-  const ThirdPage({Key? key, required this.title}) : super(key: key);
+class Personnages extends StatefulWidget {
+  const Personnages({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<ThirdPage> createState() => _ThirdPageState();
+  State<Personnages> createState() => _PersonnagesState();
 }
 
-class _ThirdPageState extends State<ThirdPage> {
+class _PersonnagesState extends State<Personnages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',

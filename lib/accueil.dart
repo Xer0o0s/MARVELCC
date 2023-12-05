@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatefulWidget {
-  const FirstPage({Key? key, required this.title}) : super(key: key);
+class Accueil extends StatefulWidget {
+  const Accueil({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<FirstPage> createState() => _FirstPageState();
+  State<Accueil> createState() => _AccueilState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _AccueilState extends State<Accueil> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',
