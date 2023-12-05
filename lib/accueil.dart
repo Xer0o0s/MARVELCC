@@ -1,14 +1,42 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
-class Accueil extends StatefulWidget {
-  const Accueil({Key? key, required this.title}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key, required this.title}) : super(key: key);
 
   final String title;
+
   @override
-  State<Accueil> createState() => _AccueilState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _AccueilState extends State<Accueil> {
+class SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      const Duration(seconds: 3),
+          () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Accueil(title: widget.title)),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.amber,
+      child: FlutterLogo(size: MediaQuery.of(context).size.height),
+    );
+  }
+}
+
+class Accueil extends StatelessWidget {
+  final String title;
+
+  const Accueil({Key? key, required this.title}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
