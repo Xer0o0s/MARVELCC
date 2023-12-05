@@ -14,7 +14,7 @@ class _ComicsState extends State<Comics> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white12,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',
@@ -32,31 +32,37 @@ class _ComicsState extends State<Comics> {
               IconButton(
                 icon: Icon(Icons.home),
                 onPressed: () {
-                  // Action lorsque l'icône Accueil est pressée
+                  Navigator.pushNamed(context, '/route1');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.home),
+                icon: Icon(Icons.book_sharp),
                 onPressed: () {
-                  // Action lorsque l'icône Accueil est pressée
+                  Navigator.pushNamed(context, '/route2');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.home),
+                icon: Icon(Icons.person),
                 onPressed: () {
-                  // Action lorsque l'icône Accueil est pressée
+                  Navigator.pushNamed(context, '/route3');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.search),
+                icon: Icon(Icons.video_camera_back),
                 onPressed: () {
-                  // Action lorsque l'icône Recherche est pressée
+                  Navigator.pushNamed(context, '/route4');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.settings),
+                icon: Icon(Icons.movie),
                 onPressed: () {
-                  // Action lorsque l'icône Paramètres est pressée
+                  Navigator.pushNamed(context, '/route5');
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.gamepad),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route6');
                 },
               ),
             ],

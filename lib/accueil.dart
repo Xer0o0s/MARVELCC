@@ -14,7 +14,7 @@ class _AccueilState extends State<Accueil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white12,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',
@@ -23,39 +23,50 @@ class _AccueilState extends State<Accueil> {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Ecran 1 - Navigator',
-              style: TextStyle(
-                color: Colors.blue,
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route1');
+                },
               ),
-            ),
-            const Padding(padding: EdgeInsets.only(bottom: 25)),
-            ElevatedButton(
+              IconButton(
+                icon: Icon(Icons.book_sharp),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route2');
                 },
-                child: const Text("Ecran 2 - ScaffoldMessenger"),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.resolveWith(
-                        (states) => Colors.orange))),
-            const Padding(padding: EdgeInsets.only(bottom: 10)),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/route3');
-              },
-              child: const Text("Ecran 3 - AlertDialog"),
-              style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.resolveWith((states) => Colors.red),
               ),
-            ),
-          ],
+              IconButton(
+                icon: Icon(Icons.person),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route3');
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.video_camera_back),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route4');
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.movie),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route5');
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.gamepad),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route6');
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

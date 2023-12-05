@@ -14,7 +14,7 @@ class _PersonnagesState extends State<Personnages> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white12,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',
@@ -23,44 +23,50 @@ class _PersonnagesState extends State<Personnages> {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Ecran 3 - AlertDialog',
-              style: TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route1');
+                },
               ),
-            ),
-            const Padding(padding: EdgeInsets.only(bottom: 25)),
-            ElevatedButton(
-              onPressed: () => showDialog<String>(
-                context: context,
-                builder: (BuildContext context) => AlertDialog(
-                  title: const Text('Titre de l’AlertDialog'),
-                  content: const Text('Description de l’AlertDialog'),
-                  actions: <Widget>[
-                    TextButton(
-                      onPressed: () => Navigator.pop(context, 'Quitter'),
-                      child: const Text('Quitter'),
-                    ),
-                    TextButton(
-                      onPressed: () => Navigator.pop(context, 'Ok'),
-                      child: const Text('Ok'),
-                    ),
-                  ],
-                ),
+              IconButton(
+                icon: Icon(Icons.book_sharp),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route2');
+                },
               ),
-              child: const Text("AlertDialog"),
-              style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.resolveWith((states) => Colors.red),
+              IconButton(
+                icon: Icon(Icons.person),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route3');
+                },
               ),
-            ),
-          ],
+              IconButton(
+                icon: Icon(Icons.video_camera_back),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route4');
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.movie),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route5');
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.gamepad),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route6');
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
