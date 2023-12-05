@@ -14,7 +14,8 @@ class _FilmsState extends State<Films> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white12,
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
         title: Center(
           child: Image.asset(
             'assets/images/MARVELCC.png',

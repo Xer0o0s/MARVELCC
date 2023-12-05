@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: const Accueil(title: 'Flutter Navigation'),
+      title: 'routes',
+      home: const Accueil(title: 'Navigation'),
       routes: <String, WidgetBuilder>{
         '/route1': (BuildContext context) => Accueil(title: 'Accueil'),
         '/route2': (BuildContext context) => Comics(title: 'Commics'),

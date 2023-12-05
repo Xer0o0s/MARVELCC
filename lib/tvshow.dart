@@ -14,6 +14,7 @@ class _TVshowState extends State<TVshow> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white12,
         title: Center(
           child: Image.asset(

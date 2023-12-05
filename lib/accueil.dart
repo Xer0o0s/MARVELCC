@@ -14,14 +14,28 @@ class _AccueilState extends State<Accueil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white12,
+        automaticallyImplyLeading: false,
+        backgroundColor: Color.fromRGBO(47, 47, 47, 1),
         title: Center(
-          child: Image.asset(
-            'assets/images/MARVELCC.png',
-            width: 260.0, // Ajustez la largeur selon vos besoins
-            height: 100.0, // Ajustez la hauteur selon vos besoins
+          child: Container(
+            padding: EdgeInsets.only(bottom: 10.0),
+            child: Image.asset(
+              'assets/images/MARVELCC.png',
+              width: 220.0, // Ajustez la largeur selon vos besoins
+              height: 50.0, // Ajustez la hauteur selon vos besoins
+            ),
           ),
         ),
+      ),
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/bg.jpeg',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         child: Container(
