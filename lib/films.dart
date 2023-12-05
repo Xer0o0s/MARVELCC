@@ -14,54 +14,68 @@ class _FilmsState extends State<Films> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
+        backgroundColor: const Color.fromRGBO(33, 33, 33, 1),
         title: Center(
-          child: Image.asset(
-            'assets/images/MARVELCC.png',
-            width: 260.0, // Ajustez la largeur selon vos besoins
-            height: 100.0, // Ajustez la hauteur selon vos besoins
+          child: Container(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: Image.asset(
+              'assets/images/MARVELCC.png',
+              width: 220.0, // Ajustez la largeur selon vos besoins
+              height: 50.0, // Ajustez la hauteur selon vos besoins
+            ),
           ),
         ),
       ),
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/bg.jpeg',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 50.0,
+        color: const Color.fromRGBO(33, 33, 33, 1),
+        height: 50,
+        child: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route1');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.book_sharp),
+                icon: const Icon(Icons.book_sharp),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route2');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route3');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.video_camera_back),
+                icon: const Icon(Icons.video_camera_back),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route4');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.movie),
+                icon: const Icon(Icons.movie),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route5');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.gamepad),
+                icon: const Icon(Icons.gamepad),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route6');
                 },
