@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'accueil.dart';
 
 class Comics extends StatefulWidget {
   const Comics({Key? key, required this.title}) : super(key: key);
@@ -47,7 +48,10 @@ class _ComicsState extends State<Comics> {
               IconButton(
                 icon: const Icon(Icons.home),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/route1');
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => MonAccueil()),
+                  );
                 },
               ),
               IconButton(

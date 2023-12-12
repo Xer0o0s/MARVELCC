@@ -68,7 +68,10 @@ class MonAccueil extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.home),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/route1');
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => MonAccueil()),
+                  );
                 },
               ),
               IconButton(
