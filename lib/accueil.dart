@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:lottie/lottie.dart';
 
 class Accueil extends StatefulWidget {
@@ -15,7 +14,7 @@ class SplashScreenState extends State<Accueil> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        Duration(seconds: 5),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => MonAccueil())));
   }
