@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
       title: 'routes',
       home: const Accueil(title: 'Navigation'),
       routes: <String, WidgetBuilder>{
-        '/route1': (BuildContext context) => Accueil(title: 'Accueil'),
-        '/route2': (BuildContext context) => Comics(title: 'Commics'),
-        '/route3': (BuildContext context) => Personnages(title: 'Personnages'),
-        '/route4': (BuildContext context) => Films(title: 'Films'),
-        '/route5': (BuildContext context) => TVshow(title: 'TV Show'),
-        '/route6': (BuildContext context) => Jeux(title: 'Jeux'),
+        '/route1': (BuildContext context) =>const Accueil(title: 'Accueil'),
+        '/route2': (BuildContext context) =>const Comics(title: 'Commics'),
+        '/route3': (BuildContext context) =>const Personnages(title: 'Personnages'),
+        '/route4': (BuildContext context) =>const Films(title: 'Films'),
+        '/route5': (BuildContext context) =>const TVshow(title: 'TV Show'),
+        '/route6': (BuildContext context) =>const Jeux(title: 'Jeux'),
       },
     );
   }
