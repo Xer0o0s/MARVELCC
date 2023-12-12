@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'accueil.dart';
+import 'apifunctions/marvel_api.dart';
+
 
 class Personnages extends StatefulWidget {
   const Personnages({Key? key, required this.title}) : super(key: key);
