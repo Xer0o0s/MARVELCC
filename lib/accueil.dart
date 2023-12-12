@@ -1,16 +1,37 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:lottie/lottie.dart';
+
 class Accueil extends StatefulWidget {
-  const Accueil({Key? key, required this.title}) : super(key: key);
-
+  const Accueil({super.key, required this.title});
   final String title;
-
   @override
-  State<Accueil> createState() => _AccueilState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _AccueilState extends State<Accueil> {
+class SplashScreenState extends State<Accueil> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => MonAccueil())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Colors.black,
+        child: Lottie.asset(
+          'assets/images/animspash.json',
+          fit: BoxFit.cover,
+        ));
+  }
+}
+
+class MonAccueil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
